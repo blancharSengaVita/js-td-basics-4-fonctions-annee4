@@ -32,4 +32,58 @@ Par exemple,
  	pour retourner true ou fasle selon que la date est valide ou pas.
 */
 
+let maxDay
+let isBissextile = false
 
+function yearValidator (annee) {
+  if (annee % 400 === 0 || (annee % 4 === 0 && annee % 100 !== 0))
+    isBissextile = true
+}
+
+function monthValidator (mois) {
+  switch (mois) {
+    case 'fevrier' :
+      if (isBissextile === true) {
+        maxDay = 29
+      } else {
+        maxDay = 28
+      }
+      break
+    case 'janvier' :
+    case 'mars' :
+    case 'mai' :
+    case 'juillet' :
+    case 'aout' :
+    case 'octobre' :
+    case 'decembre' :
+      maxDay = 31
+      break
+    case 'avril' :
+    case 'juin' :
+    case 'septembre' :
+    case 'novembre' :
+      maxDay = 30
+      break
+    default :
+      return false;
+  }
+}
+
+function dayValidator (jour) {
+  if (jour <= maxDay) {
+    return jour;
+  } else {
+    return false;
+  }
+}
+
+function dateValidator (jour, mois, annee) {
+  yearValidator(annee);
+  if (monthValidator(mois) !== false && dayValidator(jour) !== false) {
+    console.log(`le ${jour} ${mois} ${annee} est une date valide.`)
+  } else {
+    console.log(`le ${jour} ${mois} ${annee} n'est pas une date valide.`)
+  }
+}
+
+dateValidator(29, 'fevrier', 2000)

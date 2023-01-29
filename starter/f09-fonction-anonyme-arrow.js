@@ -19,8 +19,11 @@
 */
 
 
-
-
+// const bonjour = function (prenom) {
+//   console.log(`Bonjour ${prenom} !`);
+// }
+//
+// bonjour('Thomas');
 
 /*
 N.B. Dans certains cas particuliers, on peut simplifier la syntaxe des fonctions fléchées :
@@ -35,3 +38,6 @@ N.B. Dans certains cas particuliers, on peut simplifier la syntaxe des fonctions
 - L'utiliser pour saluer Thomas dans la console
 */
 
+const bonjour = prenom => console.log('bonjour Nicolas');
+
+bonjour();

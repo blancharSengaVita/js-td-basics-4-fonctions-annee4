@@ -49,4 +49,9 @@
 - L'utiliser pour saluer Thomas dans la console
 */
 
-bonjour
+// function salue(prenom) {
+//   let message = `bonjour ${prenom}`;
+//   return message;
+// }
+//
+// console.log(salue("thomas"));

@@ -10,17 +10,20 @@ Cette fonction retourne l'âge de la personne
 en calculant l'année courante moins son année de naissance
 */
 
+function calculateAge(birthYear){
+  let annee = ,new Date.getFullYear();
+  console.log(` né en ${annee - birthYear}`);
+}
 
+calculateAge(1990)
 
-/* 
+/*
 Utiliser la fonction qu'on vient de créer pour calculer
 	- l'âge de John (né en 1990)
 	- l'âge de Mike (né en 1948)
 	- l'âge de Jane (née en 1969)
 Afficher ces âges dans la console
 */
-
-
 
 
 
